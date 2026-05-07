@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Shyam Property - Gurugram</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fa;color:#333}
+header{background:#0f172a;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-size:14px}
+.hero{height:90vh;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff}
+.hero h2{font-size:44px}
+.hero p{margin:15px 0;font-size:18px}
+.btn{padding:12px 25px;background:#25D366;border:none;border-radius:30px;color:#fff;text-decoration:none;font-weight:600;margin:5px}
+.section{padding:60px 20px;max-width:1100px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08)}
+.property img{width:100%;border-radius:10px}
+.badge{background:#ff7e5f;color:#fff;padding:5px 10px;border-radius:20px;font-size:12px}
+.contact-box{background:#0f172a;color:#fff;border-radius:15px;padding:30px;text-align:center}
+input,textarea{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:none}
+button{background:#ff7e5f;color:#fff;border:none;padding:12px 20px;border-radius:8px;cursor:pointer}
+footer{background:#020617;color:#fff;text-align:center;padding:20px}
+.floating-btn{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:20px;text-decoration:none}
+</style>
+
+<script>
+function sendToWhatsApp(event){
+  event.preventDefault();
+  let name=document.getElementById('name').value;
+  let phone=document.getElementById('phone').value;
+  let msg=document.getElementById('msg').value;
+  let url=`https://wa.me/916396402128?text=Name:%20${name}%0APhone:%20${phone}%0ARequirement:%20${msg}`;
+  window.open(url,'_blank');
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Shri Shyam Property</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#properties">Properties</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Buy, Sell & Rent Property in Gurugram</h2>
+  <p>100+ Happy Clients | Trusted Local Experts</p>
+  <a class="btn" href="tel:6396402128">Call Now</a>
+  <a class="btn" href="https://wa.me/919557385600">WhatsApp</a>
+</section>
+
+<section class="section" id="properties">
+  <h2 style="text-align:center;margin-bottom:30px">Hot Properties</h2>
+  <div class="cards">
+
+    <div class="card property">
+      <span class="badge">Featured</span>
+      <img src="C:\Users\Dell\OneDrive\Desktop\web real\images\bedroom.jpg.jpeg" alt="Bedroom">
+      <h3>Modern Bedroom</h3>
+      <p>Premium Interior • Sector 40</p>
+      <p><strong>Contact for Price</strong></p>
+      <a class="btn" href="https://wa.me/919557385600">Enquire</a>
+    </div>
+
+    <div class="card property">
+      <span class="badge">Featured</span>
+      <img src="C:\Users\Dell\OneDrive\Desktop\web real\images\living.jpg.jpeg"alt="Living Area">
+      <h3>Stylish Living Area</h3>
+      <p>Fully Furnished • Ready to Move</p>
+      <p><strong>Contact for Price</strong></p>
+      <a class="btn" href="https://wa.me/916396402128">Enquire</a>
+    </div>
+
+    <div class="card property">
+      <span class="badge">Featured</span>
+      <img src="C:\Users\Dell\OneDrive\Desktop\web real\images\kitchen.jpg.jpeg"alt="Kitchen">
+      <h3>Modular Kitchen</h3>
+      <p>Modern Setup • Premium Finish</p>
+      <p><strong>Contact for Price</strong></p>
+      <a class="btn" href="https://wa.me/916396402128">Enquire</a>
+    </div>
+
+    <div class="card property">
+      <span class="badge">Luxury</span>
+      <img src="C:\Users\Dell\OneDrive\Desktop\web real\images\dining.jpg.jpeg" alt="Dining Area">
+      <h3>Luxury Dining Space</h3>
+      <p>Designer Interior • Spacious</p>
+      <p><strong>Contact for Price</strong></p>
+      <a class="btn" href="https://wa.me/919557385600">Enquire</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2 style="text-align:center;margin-bottom:30px">Why Clients Trust Us</h2>
+  <div class="cards">
+    <div class="card"><h3>✔ Local Expertise</h3><p>Deep knowledge of Gurugram market.</p></div>
+    <div class="card"><h3>✔ Genuine Deals</h3><p>No fake listings. Only verified properties.</p></div>
+    <div class="card"><h3>✔ Fast Response</h3><p>Instant call & WhatsApp support.</p></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-box">
+    <h2>Get Instant Callback</h2>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input id="name" type="text" placeholder="Your Name" required>
+      <input id="phone" type="tel" placeholder="Phone Number" required>
+      <textarea id="msg" placeholder="Your Requirement"></textarea>
+      <button type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<a class="floating-btn" href="https://wa.me/916396402128">💬</a>
+
+<footer>
+  <p>📞 6396402128 | 9557385600 | 📍 Sector 40 Gurugram</p>
+</footer>
+
+</body>
+</html>
